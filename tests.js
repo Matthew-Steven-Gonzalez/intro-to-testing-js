@@ -21,3 +21,7 @@ describe('sayHello', function() {
         expect(typeof sayHello).toBe('function');
     });
 })
+
+// exercise # 2 //
+
+describe('')
