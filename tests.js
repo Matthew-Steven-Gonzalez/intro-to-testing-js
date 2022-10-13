@@ -50,6 +50,30 @@ describe('sayHello', function() {
 //      expect(sayHello(2)).toBe("you have entered a number!");
 //  });
 
-
 });
+
+describe ("isFive", function(){
+    it('should be a defined function.', function () {
+        expect(typeof isFive).toBe('function');
+    });
+    it('should return a string when called.', function () {
+        expect(typeof isFive()).toBe('string');
+    });
+    it('should return a string when called.', function () {
+        expect(isFive(true)).toBe('you have entered a boolean!');
+    });
+    it('should return "false!" when called with false.', function () {
+        expect(isFive(false)).toBe('you have entered a boolean!');
+    });
+    it('should return "True" when called with "5".', function () {
+        expect(isFive("5")).toBe('True');
+    });
+    it('should return "True" when called with "5".', function () {
+        expect(isFive(5)).toBe('True');
+    });
+}
+)
+
+
+
 
