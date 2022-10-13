@@ -4,7 +4,24 @@ function helloWorld() {
 }
 
 function sayHello(input) {
-        return "Hello, " + input + "!";
+        if(input === undefined){
+            return "Hello, World!";
+        }
+        else if(input === true){
+            return "Hello, World!";
+        }
+        else if(input === false){
+            return "Hello, World!";
+        }
+        else if(input === null){
+            return "null data was input!";
+        }
+        else if(input === ""){
+            return "empty string!";
+        }
+        else{
+            return "Hello, " + input + "!";
+        }
 }
 
 // function sayHello(input) {

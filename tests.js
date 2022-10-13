@@ -31,5 +31,25 @@ describe('sayHello', function() {
     it('should return "Hello, Pat!" when called with Alex.', function () {
         expect(sayHello("Pat")).toBe('Hello, Pat!');
     });
+    it('should return "Hello, World!" when called.', function () {
+        expect(sayHello()).toBe('Hello, World!');
+    });
+    it('should return "Hello, World!" when called with true.', function () {
+        expect(sayHello(true)).toBe('Hello, World!');
+    });
+    it('should return "Hello, World!" when called with false.', function () {
+        expect(sayHello(false)).toBe('Hello, World!');
+    });
+    it('should return "null" when called with null data type.', function () {
+        expect(sayHello(null)).toBe('null data was input!');
+    });
+    it('should return "empty string!" when called with "".', function () {
+        expect(sayHello("")).toBe('empty string!');
+    });
+//   it('should return "you have entered a number!" when called with number type data.', function () {
+//      expect(sayHello(2)).toBe("you have entered a number!");
+//  });
+
+
 });
 
