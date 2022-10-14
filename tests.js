@@ -71,9 +71,86 @@ describe ("isFive", function(){
     it('should return "True" when called with "5".', function () {
         expect(isFive(5)).toBe('True');
     });
-}
-)
+});
 
+describe('isEven',function(){
+    it('should be a defined function.', function () {
+        expect(typeof isEven).toBe('function');
+    });
+    it('should return a string when called.', function () {
+        expect(typeof isEven()).toBe('string');
+    });
+    it('should return a string when called a Boolean "true".', function () {
+        expect(isEven(true)).toBe("You have not entered a number!");
+    });
+    it('should return a string when called a Boolean "false".', function () {
+        expect(isEven(false)).toBe("You have not entered a number!");
+    });
+    it('should return "the number is even! string when input is "2".', function () {
+        expect(isEven(2)).toBe('the number is even!');
+    });
+    it('should return "the number is odd!" when called with "-4".', function () {
+        expect(isEven(-4)).toBe('the number is even!');
+    });
+    it('should return "the number is odd!" when called with "3".', function () {
+        expect(isEven(3)).toBe('the number is odd!');
+    });
+    it('should return "You have not entered a number!" when called with "Banana".', function () {
+        expect(isEven("Banana")).toBe('You have not entered a number!');
+    });
+    it('should return "You have not entered a number!" when called with "Infinity".', function () {
+        expect(isEven(Infinity)).toBe('You have not entered a number!');
+    });
+    it('should return "the number is even!" when called with "8".', function () {
+        expect(isEven("8")).toBe('the number is even!');
+    });
+})
+describe('isVowel', function(){
+    it('should be a defined function.', function () {
+        expect(typeof isVowel).toBe('function');
+    });
+    it('should return a string when called.', function () {
+        expect(typeof isVowel()).toBe('string');
+    });
+    it('should return false when called with "true":.', function () {
+        expect(isVowel(true)).toBe('false');
+    });
+    it('should return false when called with "false".', function () {
+        expect(isVowel(false)).toBe('false');
+    });
+    it('should return false when called with "Banana".', function () {
+        expect(isVowel("Banana")).toBe(false);
+    });
+    it('should return "true" when called with "a" or "A".', function () {
+        expect(isVowel("a")).toBe(true);
+    });
+    it('should return "true" when called with "e" or "E".', function () {
+        expect(isVowel("e")).toBe(true);
+    });
+});
+describe('add', function(){
+    it('should be a defined function.', function () {
+        expect(typeof add).toBe('function');
+    });
+    it('should return a number when called.', function () {
+        expect(typeof add()).toBe('number');
+    });
+    it('should return 5 when called with 2 and 3.', function () {
+        expect(add(2 , 3)).toBe(5);
+    });
+    it('should return -12 when called with -3 and -9.', function () {
+        expect(add(-3 , -9)).toBe(-12);
+    });
+    it('should return 11 when called with "5" and 6.', function () {
+        expect(add("5" , 6)).toBe(11);
+    })
+    it('should return 6 when called with -3 and -9.', function () {
+        expect(add("-4" , 10)).toBe(6);
+    });
+    it('should return NaN when called with "banana" and "split".', function () {
+        expect(add("banana" , "split")).toBe(NaN);
+    });
+});
 
 
 

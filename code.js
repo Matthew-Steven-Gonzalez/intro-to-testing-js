@@ -25,7 +25,7 @@ function sayHello(input) {
 }
 
 function isFive(input) {
-    if(input == 5){
+    if(parseInt(input) === 5){
         return "True";
     }
     else if(input === false){
@@ -40,6 +40,33 @@ function isFive(input) {
     else{
         return "Hello, " + input + "!";
     }
+}
+
+function isEven(input) {
+    if( typeof input == "number" && input != Infinity){
+        if(parseInt(input) % 2 === 0){
+            return "the number is even!";
+        }
+        else{
+            return "the number is odd!";
+    }}
+    else{
+        return "You have not entered a number!"
+    }
+
+}
+
+function isVowel(x) {
+    if(x.toLowerCase() === "a"||x.toLowerCase() === "e"||x.toLowerCase() === "i"||x.toLowerCase() === "o"||x.toLowerCase() === "u"){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+function add( x , y){
+    return parseInt(x) + parseInt(y);
 }
 // function sayHello(input) {
 //     if( input === "Jane"){
